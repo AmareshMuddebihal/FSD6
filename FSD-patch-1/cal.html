@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Scientific Calculator using HTML, CSS and Js
+	</title>
+    <link rel="stylesheet" href="one.css">
+	<script src="one.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/12.3.0/math.js" integrity="sha512-TaKu3GlWLNU3fyPcvsSHSh44vX/Z43ePJDRTJr7IuUKVlUHHsHm7ODYNt5xffy75M6MOXsh7p+VyXCk5icuoxQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body>
+	<h1 style="color: green; text-align: center;">Scientific Calculator</h1>
+    <form>
+        <table>
+            <tr>
+                <td colspan="6">
+                    <input id="display" type="text">
+                </td>
+            </tr>
+            <tr>
+                <td><input type="button" value="1" onclick="appendValue('1')"></td>
+                <td><input type="button" value="2" onclick="appendValue('2')"></td>
+                <td><input type="button" value="3" onclick="appendValue('3')"></td>
+                <td><input type="button" value="C" onclick="clearDisplay()"></td>
+                <td><input type="button" value="&#9003;" onclick="backspace()"></td>
+                <td><input type="button" value="=" onclick="calculate()"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="4" onclick="appendValue('4')"></td>
+                <td><input type="button" value="5" onclick="appendValue('5')"></td>
+                <td><input type="button" value="6" onclick="appendValue('6')"></td>
+                <td><input type="button" value="-" onclick="appendValue('-')"></td>
+                <td><input type="button" value="%" onclick="appendValue('%')"></td>
+                <td><input type="button" value="cos(" onclick="appendValue('cos(')"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="7" onclick="appendValue('7')"></td>
+                <td><input type="button" value="8" onclick="appendValue('8')"></td>
+                <td><input type="button" value="9" onclick="appendValue('9')"></td>
+                <td><input type="button" value="x" onclick="appendValue('*')"></td>
+                <td><input type="button" value="!" onclick="appendValue('!')"></td>
+                <td><input type="button" value="sin(" onclick="appendValue('sin(')"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="." onclick="appendValue('.')"></td>
+                <td><input type="button" value="0" onclick="appendValue('0')"></td>
+                <td><input type="button" value="," onclick="appendValue(',')"></td>
+                <td><input type="button" value="+" onclick="appendValue('+')"></td>
+                <td><input type="button" value="/" onclick="appendValue('/')"></td>
+                <td><input type="button" value="tan(" onclick="appendValue('tan(')"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="E" onclick="e()"></td>
+                <td><input type="button" value="pi" onclick="pi()"></td>
+                <td><input type="button" value="^" onclick="power()"></td>
+                <td><input type="button" value="(" onclick="appendValue('(')"></td>
+                <td><input type="button" value=")" onclick="appendValue(')')"></td>
+                <td><input type="button" value="log(" onclick="base10Log()"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="sqrt(" onclick="squareRoot()"></td>
+                <td><input type="button" value="ln2" onclick="appendValue(Math.LN2)"></td>
+                <td><input type="button" value="log10(" onclick="base10Log()"></td>
+                <td><input type="button" value="l2e" onclick="appendValue(Math.LOG2E)"></td>
+                <td><input type="button" value="l10e" onclick="appendValue(Math.LOG10E)"></td>
+                <td><input type="button" value="exp(" onclick="appendValue('exp(')"></td>
+            </tr>
+        </table>
+    </form>
+
+    <script>
+        function appendValue(value) {
+            let display = document.getElementById("display");
+            if (!isError) {
+                display.value += value;
+            }
+        }
+
+        function clearDisplay() {
+            let display = document.getElementById("display");
+            display.value = '';
+            isError = false;
+        }
+    </script>
+</body>
+</html>
