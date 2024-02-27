@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Declare the document type and character set -->
+  <head>
+    <!-- Define the title of the webpage -->
+    <title>Create Your Own Chatbot</title>
+    <!-- Define the character set for the webpage -->
+    <meta charset="UTF-8" />
+    <!-- Define the viewport for the webpage -->
+    <meta name="viewport" content="width=device-width" />
+    <!-- Link the external script file -->
+    <script src="index.js"></script>
+    <!-- Link the external style sheet file -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Link the external font stylesheet -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700,300">
+    <!-- Link the external iconic font stylesheet -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.1.2/css/material-design-iconic-font.min.css">
+    <!-- Link the external custom font stylesheet -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400&family=Finger+Paint&display=swap">
+  </head>
+  <body>
+    <!-- Define the main card for the chatbot -->
+    <div class="card">
+      <!-- Define the header section of the chatbot -->
+      <div id="header">
+        <!-- Define the title of the chatbot -->
+        <h1 style="position: relative; color: #f1ba06; " >Chatter box!</h1>
+      </div>
+      <!-- Define the message section of the chatbot -->
+      <div id="message-section">
+        <!-- Define the initial message from the chatbot -->
+        <div class="message" id="bot" style="animation:cubic-bezier(0.075, 0.82, 0.165, 1) ;" ><span id="bot-response">Hello.. I'm listening! Go on..</span></div>
+      </div>
+      <!-- Define the input section of the chatbot -->
+      <div id="input-section">
+        <!-- Define the input field for the user's message -->
+        <input id="input" type="text" placeholder="Type a message" autocomplete="off" autofocus="autofocus"/>
+        <!-- Define the send button -->
+        <button class="send" onclick="sendMessage()">
+          <!-- Define the send button icon -->
+          <div class="circle"><i class="zmdi zmdi-mail-send"></i></div>
+        </button>
+      </div>
+    </div>
+    <!-- Link the external script file -->
+    <script src="script.js"></script>
+  </body>
+</html>
